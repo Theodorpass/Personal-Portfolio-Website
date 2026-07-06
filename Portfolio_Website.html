@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- GATE SCREEN -->
+<section id="gate-screen">
+    <h2>SYSTEM ACCESS CHECK</h2>
+
+    <p id="captcha-question">Solve this in order to continue : 1 + 1 = ?</p>
+    <input id="captcha-answer" type="text">
+    <button id="submit-btn">Ready to Launch</button>
+    <p id="error-message">No need a Bachelor's degree for this!</p>
+</section>
+
+
+<!-- MILITARY ACCESS SEQUENCE -->
+<section id="access-screen">
+
+    <p class="access-line" id="line1">
+        ACCESS GRANTED
+        <span class="loading-dots-inline" id="dots1">
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+        </span>
+    </p>
+
+    <p class="access-line" id="line2">
+        VERIFYING IDENTITY...
+        <span class="loading-dots-inline" id="dots2">
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+        </span>
+    </p>
+
+    <p class="access-line" id="line3">
+        LOADING THEODOROS PORTFOLIO...
+        <span class="loading-dots-inline" id="dots3">
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+            <span class="loading-dot">●</span>
+        </span>
+    </p>
+
+</section>
+
+
+
+<!-- MAIN PORTFOLIO -->
+<div id="main-site">
+
+    <h1 class="after-passing-terminal">Welcome To My Portfolio</h1>
+
+    <nav>
+        <a href="#contact-info">CONTACT INFORMATION</a> |
+        <a href="#about-website">ABOUT THIS WEBSITE</a> |
+        <a href="#projects">LINKS TO MY PROJECTS</a>
+    </nav>
+
+    <main>
+
+        <!-- CONTACT INFO -->
+        <section id="contact-info" class="tab-section active">
+            <h2>Contact Information</h2>
+
+            <h3 class="compact">Name: Theodoros Markomanolakis</h3>
+            <h3 class="compact">Email: <a href="mailto:kkk1989_1@hotmail.com">kkk1989_1@hotmail.com</a></h3>
+            <h3 class="compact">Phone: +30 693 407 0430</h3>
+            <h3 class="compact">Location: Athens, Greece, Metropolitan area</h3>
+        </section>
+
+        <!-- ABOUT WEBSITE -->
+        <section id="about-website" class="tab-section">
+            <h2>About This Website</h2>
+            <p class="text-below-contact-information">
+                I am a Computer Science graduate with a strong passion for software engineering and full-stack development.
+                I specialize in designing and developing scalable, high-quality web applications, with experience across both frontend and backend technologies.
+                My technical expertise includes Python, JavaScript, PHP, Go, SQL, HTML, and CSS, enabling me to build responsive user interfaces, develop robust backend services, design RESTful APIs, and work with relational databases. 
+                I am committed to writing clean, maintainable, and efficient code while following modern software development best practices.
+                I am driven by continuous learning and enjoy solving complex technical challenges through innovative and practical solutions. My goal is to contribute to the development of impactful software products
+                while growing as a Full-Stack Software Engineer and collaborating with teams that value quality, innovation, and excellence.
+            </p>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="tab-section">
+            <h2>Links to My Projects</h2>
+
+            <h3 class="compact">Python links</h3>
+            <ul>
+                <li><a href="https://github.com/Theodorpass/Python-PDFtoDOCX">Python PDF to DOCX Converter 💻 View Code</a></li>
+                <li><a href="https://github.com/Theodorpass/Python-PDFtoPowerPoint">Python PDF to PowerPoint Converter 💻 View Code</a></li>
+                <li><a href="https://github.com/Theodorpass/Python-PDFtoWORD">Python PDF to WORD Converter 💻 View Code</a></li>
+                <li><a href="https://github.com/Theodorpass/Python-PDFtoWordLayout">Python PDF to Word Layout Converter 💻 View Code</a></li>
+                <li><a href="https://github.com/Theodorpass/Python-Hash-Identifier">Python Hash Identifier 💻 View Code</a></li>
+                <li><a href="https://github.com/Theodorpass/Python-BluetoothScan">Python Bluetooth Scanner 💻 View Code</a></li>
+            </ul>
+
+            <h3>HTML Links</h3>
+            <ul>
+                <li><a href="#">Loading Soon</a></li>
+                <li><a href="#">Loading Soon</a></li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

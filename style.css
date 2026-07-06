@@ -1,0 +1,298 @@
+
+body {
+    background-color: #0a0f14; /* dark tactical background */
+    color: #cce0cc; /* soft military green */
+    font-family: "Consolas", "Courier New", monospace; /* military terminal font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Subtle scanline effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.02) 2px,
+        transparent 3px,
+        transparent 4px
+    );
+    z-index: 9999;
+}
+
+/* 
+   HEADINGS
+    */
+
+h1, h2 {
+    color: #7fffbf; /* glowing green */
+    text-shadow: 0 0 8px #00ff99;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h3.compact {
+    margin: 5px 0;
+    color: #b7ffcf;
+}
+
+/* 
+   TERMINAL MILITARY STYLE
+    */
+
+/* Compact CMD-style terminal box */
+#gate-screen {
+    width: 450px;              /* smaller width */
+    margin: 100px auto;        /* centered with space above */
+    padding: 20px 20px;        /* tighter padding */
+
+    background-color: #0a0a0a;
+    color: #4da6ff;
+    font-family: Consolas, "Courier New", monospace;
+
+    border: 2px solid #00ff99;
+    border-radius: 6px;
+
+    box-shadow: 0 0 15px rgba(0,255,100,0.18);
+
+    opacity: 1;
+    transition: opacity 1.2s ease;
+    text-align: left;          /* real terminal alignment */
+    position: relative;
+}
+
+/* Smaller CMD-style title bar */
+#gate-screen::before {
+    content: "C:\\SYSTEM\\ACCESS_CHECK";
+    position: absolute;
+    top: -24px;
+    left: 0;
+    width: 100%;
+    padding: 3px 10px;
+
+    background: #003300;
+    color: #7fffbf;
+    font-size: 12px;
+    border: 2px solid #00ff99;
+    border-bottom: none;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+/* Input + button styling inside CMD */
+#captcha-answer {
+    background: #000;
+    border: 1px solid #00ff99;
+    color: #b7ffcf;
+    padding: 5px;
+    width: 90px;               /* smaller input */
+}
+
+#submit-btn {
+    background: #003300;
+    border: 1px solid #00ff99;
+    color: #b7ffcf;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#submit-btn:hover {
+    background: #005500;
+}
+
+/* Error message */
+#error-message {
+    color: #ff4d4d;
+    margin-top: 10px;
+}
+
+
+/* CAPTCHA INPUT */
+#captcha-answer {
+    background: #0d1a0d;
+    border: 1px solid #00ff99;
+    color: #b7ffcf;
+    padding: 5px;
+}
+
+/* SUBMIT BUTTON */
+#submit-btn {
+    background: #0d1a0d;
+    border: 1px solid #00ff99;
+    color: #b7ffcf;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#submit-btn:hover {
+    background: #003300;
+}
+
+/* ERROR MESSAGE */
+#error-message {
+    display: none;
+    color: #ff4d4d;
+    margin-top: 10px;
+}
+
+/* SHAKE ANIMATION */
+.shake {
+    animation: shakeAnim 0.3s;
+}
+
+@keyframes shakeAnim {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* 
+   ACCESS SCREEN (MILITARY)
+    */
+
+#access-screen {
+    display: none;
+    background-color: #000;
+    color: #d4d4aa;
+    font-family: monospace;
+    padding: 40px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.access-line {
+    opacity: 0;
+    font-size: 22px;
+    margin: 10px 0;
+    text-shadow: 0 0 8px #00ff99;
+    animation: typing 1s steps(20) forwards;
+    
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* LOADING DOTS */
+.loading-dots-inline {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 22px;
+    color: #00ff00;
+    text-shadow: 0 0 8px #00ff00;
+    vertical-align: middle;
+}
+
+.loading-dot {
+    opacity: 0.1;
+    transition: opacity 0.12s ease-in-out;
+}
+
+/* 
+   MAIN SITE (AFTER TERMINAL)
+    */
+
+#main-site {
+    display: none;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+    text-align: center;
+
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+
+    background: #0f1a0f;
+    color: #cce0cc;
+    font-family: Consolas, monospace;
+    border-radius: 10px;
+
+    border: 2px solid #00aa00; /* military accent */
+    box-shadow: 0 0 20px rgba(0,255,100,0.2);
+}
+
+/* 
+   TAB SYSTEM
+    */
+
+.tab-section {
+    display: none;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+/* 
+   NAVIGATION (MILITARY HUD)
+    */
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 2px solid #00ff99;
+}
+
+nav a {
+    color: #00ff99;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #003300;
+    color: #7fffbf;
+}
+
+/* 
+   SECTIONS (INTEL PANELS)
+    */
+
+section {
+    background: #0d1a0d;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 1px solid #00ff99;
+    box-shadow: 0 0 10px rgba(0,255,100,0.15);
+}
+
+/* PROJECT LINKS */
+ul li a {
+    color: #00ff99;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #7fffbf;
+}
+ul {
+    list-style: none;     /* removes the dots */
+    padding-left: 0;      
+}
+.tab-section {
+    display: none;
+}
+
+.tab-section.active {
+    display: block;
+}
